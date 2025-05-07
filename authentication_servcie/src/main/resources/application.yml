@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+
+  application:
+  name: authentication-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/lakshmi?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: o3
+    password: o3_d053d170593a
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+    ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+
