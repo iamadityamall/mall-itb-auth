@@ -2,11 +2,14 @@ package com.mall.lakshmi.authentication_servcie.dto;
 
 import java.time.LocalDateTime;
 
-public class ApiResponse<T> {
-    private String status;
+public class ApiResponse <T>{
+    private String status;       // "SUCCESS" or "FAILED"
     private String message;
     private T payload;
     private LocalDateTime timeStamp;
+
+    public ApiResponse() {
+    }
 
     public ApiResponse(String status, String message, T payload, LocalDateTime timeStamp) {
         this.status = status;
@@ -16,7 +19,7 @@ public class ApiResponse<T> {
     }
 
     public String getStatus() {
-        return this.status;
+        return status;
     }
 
     public void setStatus(String status) {
@@ -24,7 +27,7 @@ public class ApiResponse<T> {
     }
 
     public String getMessage() {
-        return this.message;
+        return message;
     }
 
     public void setMessage(String message) {
@@ -32,7 +35,7 @@ public class ApiResponse<T> {
     }
 
     public T getPayload() {
-        return this.payload;
+        return payload;
     }
 
     public void setPayload(T payload) {
@@ -40,15 +43,20 @@ public class ApiResponse<T> {
     }
 
     public LocalDateTime getTimeStamp() {
-        return this.timeStamp;
+        return timeStamp;
     }
 
     public void setTimeStamp(LocalDateTime timeStamp) {
         this.timeStamp = timeStamp;
     }
 
+    @Override
     public String toString() {
-        String var10000 = this.status;
-        return "ApiResponse{status='" + var10000 + "', message='" + this.message + "', payload=" + String.valueOf(this.payload) + ", timeStamp=" + String.valueOf(this.timeStamp) + "}";
+        return "ApiResponse{" +
+                "status='" + status + '\'' +
+                ", message='" + message + '\'' +
+                ", payload=" + payload +
+                ", timeStamp=" + timeStamp +
+                '}';
     }
 }

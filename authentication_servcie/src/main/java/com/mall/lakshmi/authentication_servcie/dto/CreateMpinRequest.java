@@ -1,21 +1,15 @@
 package com.mall.lakshmi.authentication_servcie.dto;
 
-import jakarta.persistence.Column;
-
-public class LoginRequest {
+public class CreateMpinRequest {
     private String cifNumber;
     private String mpin;
 
-    @Column(name = "ip_address")
-    private String ipAddress;
-
-    public LoginRequest() {
+    public CreateMpinRequest() {
     }
 
-    public LoginRequest(String cifNumber, String mpin, String ipAddress) {
+    public CreateMpinRequest(String cifNumber, String mpin) {
         this.cifNumber = cifNumber;
         this.mpin = mpin;
-        this.ipAddress = ipAddress;
     }
 
     public String getCifNumber() {
@@ -34,20 +28,11 @@ public class LoginRequest {
         this.mpin = mpin;
     }
 
-    public String getIpAddress() {
-        return ipAddress;
-    }
-
-    public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
-    }
-
     @Override
     public String toString() {
-        return "LoginRequest{" +
+        return "CreateMpinRequest{" +
                 "cifNumber='" + cifNumber + '\'' +
                 ", mpin='" + mpin + '\'' +
-                ", ipAddress='" + ipAddress + '\'' +
                 '}';
     }
 }
