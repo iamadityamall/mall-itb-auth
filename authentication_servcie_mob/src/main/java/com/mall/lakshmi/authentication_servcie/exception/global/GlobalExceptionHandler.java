@@ -9,7 +9,6 @@ import com.mall.lakshmi.authentication_servcie.exception.custom.cif.LoginAttempt
 import com.mall.lakshmi.authentication_servcie.exception.custom.mpin.InvalidMpinException;
 import com.mall.lakshmi.authentication_servcie.exception.custom.mpin.MpinAlreadySetException;
 import com.mall.lakshmi.authentication_servcie.exception.custom.mpin.MpinNotFoundException;
-import org.springframework.cglib.core.Local;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

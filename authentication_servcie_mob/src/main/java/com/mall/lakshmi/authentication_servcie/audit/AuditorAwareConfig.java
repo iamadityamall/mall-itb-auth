@@ -1,19 +1,18 @@
 package com.mall.lakshmi.authentication_servcie.audit;
 
-import java.util.Optional;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
 
+import java.util.Optional;
+
 @Configuration
-public class AuditorConfig {
-    public AuditorConfig() {
-    }
+public class AuditorAwareConfig  {
 
     @Bean
     public AuditorAware<String> auditorProvider() {
-        return () -> {
-            return Optional.of("SYSTEM");
-        };
+        System.out.println("Audit triggered============================================================");
+        return () -> Optional.of("SYSTEM"); // Replace with SecurityContextHolder later
     }
+
 }

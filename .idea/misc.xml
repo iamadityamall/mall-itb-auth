@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/authentication_servcie/pom.xml" />
+        <option value="$PROJECT_DIR$/authentication_servcie_mob/pom.xml" />
       </list>
     </option>
   </component>

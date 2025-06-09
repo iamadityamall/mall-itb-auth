@@ -6,9 +6,9 @@ spring:
     name: authentication-service
 
   datasource:
-    url: jdbc:mysql://localhost:3306/lakshmi?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: o3
-    password: o3_d053d170593a
+    url: jdbc:mysql://103.108.12.222:3306/dev?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: idbiintech_ai
+    password: idbiintech@123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
